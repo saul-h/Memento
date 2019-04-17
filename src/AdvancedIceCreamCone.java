@@ -1,3 +1,11 @@
+/*
+ * Abel Acosta
+ * Saul Hernandez
+ * Purpose: This program demonstrates the memento design pattern with ice creams.
+ * Input: Choose ice cream from system input.
+ * Output: Prints ice cream information in system output. 
+ */
+
 /* This class is used to model the properties and behaviors of an ice cream cone.
    There are currently restriction on the construction of the cone: only one
    flavor of ice cream is allowed. */

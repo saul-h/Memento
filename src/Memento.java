@@ -1,3 +1,11 @@
+/*
+ * Abel Acosta
+ * Saul Hernandez
+ * Purpose: This program demonstrates the memento design pattern with ice creams.
+ * Input: Choose ice cream from system input.
+ * Output: Prints ice cream information in system output. 
+ */
+
 import java.util.ArrayList;
 public class Memento {
 	

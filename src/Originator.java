@@ -1,3 +1,11 @@
+/*
+ * Abel Acosta
+ * Saul Hernandez
+ * Purpose: This program demonstrates the memento design pattern with ice creams.
+ * Input: Choose ice cream from system input.
+ * Output: Prints ice cream information in system output. 
+ */
+
 public class Originator {
 	
 	AdvancedIceCreamCone iceCream;
@@ -16,5 +24,9 @@ public class Originator {
 	
 	public void getStateFromMemento(Memento m) {
 		this.iceCream = m.getState();
+	}
+	
+	public String toString() {
+		return "Originator state: " + iceCream;
 	}
 }
