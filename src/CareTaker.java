@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  * Object stores list of mementos of ice cream states
  * @author Abel and Saul
- * @verison 1.0
+ * @version 1.0
  */
 public class CareTaker {
 	/**
