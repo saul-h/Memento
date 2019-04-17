@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*
  * Abel Acosta
  * Saul Hernandez
@@ -32,8 +34,46 @@ public class Main {
 		originator.setState(strawberryIceCream);
 		careTaker3.add(originator.saveStateToMemento());
 		
+		// Changing ice creams so they can be restored later
+		chocolateIceCream.addScoop();
+		chocolateIceCream.addToppings("Banana");
+		vanillaIceCream.setFlavor("Rocky Road");
+		strawberryIceCream.addScoop();
+		strawberryIceCream.setTypeOfCone("Cup");
+		
 		// Asking user for which cone they want
-		System.out.println("Which cone do you want?");
+		System.out.println("Which cone do you want? (1-3)");
 		System.out.println("1. Chocolate\n2. Vanilla\n3. Strawberry");
+		
+		Scanner input = new Scanner(System.in);
+		int index = 1;
+		boolean valid = false;
+		
+		while(!valid) {
+			try {
+				index = Integer.parseInt(input.nextLine());
+				if(index < 1 || index > 3) {
+					throw new Exception();
+				}
+				valid = true;
+			}catch(Exception e) {
+				System.out.println("Enter a valid number (1-3)");
+			}
+		}
+		
+		
+		if(index == 1) {
+			System.out.println("Restoring chocolate...");
+			originator.getStateFromMemento(careTaker.get(0));
+			System.out.println(originator.getState());
+		}else if(index == 2) {
+			System.out.println("Restroing vanilla...");
+			originator.getStateFromMemento(careTaker2.get(0));
+			System.out.println(originator.getState());
+		}else {
+			System.out.println("Restoring strawberry...");
+			originator.getStateFromMemento(careTaker3.get(0));
+			System.out.println(originator.getState());
+		}
 	}
 }
