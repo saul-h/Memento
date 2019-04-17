@@ -12,9 +12,24 @@ public class Main {
 		
 		// Adding toppings
 		chocolateIceCream.addToppings("Oreos");
-		strawberryIceCream.addToppings("Sprinkles");
+		vanillaIceCream.addToppings("Sprinkles");
 		strawberryIceCream.addToppings("Nuts");
 		
 		// TODO: Save Ice Creams
+		Originator originator = new Originator();
+		CareTaker careTaker = new CareTaker();
+		
+		originator.setState(chocolateIceCream);
+		careTaker.add(originator.saveStateToMemento());
+		
+		// Changing Ice Cream states
+		chocolateIceCream.setFlavor("Rocky road");
+		chocolateIceCream.addToppings("M&ms");
+		
+		System.out.println(chocolateIceCream);
+		
+		
+		originator.getStateFromMemento(careTaker.get(0));
+		System.out.println(originator.getState());
 	}
 }
