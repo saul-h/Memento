@@ -6,6 +6,6 @@ public class Originator {
 	}
 	
 	public Memento saveStateToMemento(){
-	      return new Memento(iceCream.getNumberOfScoops(), iceCream.getFlavor(), iceCream.getTypeOfCone());
+	      return new Memento(iceCream.getNumberOfScoops(), iceCream.getFlavor(), iceCream.getTypeOfCone(), iceCream.getToppings());
 	}
 }
