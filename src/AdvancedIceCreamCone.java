@@ -52,14 +52,14 @@ public class AdvancedIceCreamCone {
 	}
 /**
  * this method returns the ice cream flavor
- * @return
+ * @return flavor type of cone
  */
 	public String getFlavor() {
 		return flavor;
 	}
 /**
  * this method returns the type of cone
- * @return
+ * @return type of cone
  */
 	public String getTypeOfCone() {
 		return typeOfCone;
@@ -72,21 +72,21 @@ public class AdvancedIceCreamCone {
 	}
 /**
  * this method allows you to change the ice cream flavor
- * @param flv
+ * @param flv flavor you want to set
  */
 	public void setFlavor(String flv) {
 			flavor=flv;
 	}
 /**
  * this method allows you to change the type of cone
- * @param cone
+ * @param cone cone you want to set
  */
 	public void setTypeOfCone(String cone) {
 		typeOfCone=cone;
 	}
 /**
  * this method allows you to add  toppings
- * @param top
+ * @param top topping you want to add
  */
     public void addToppings(String top) {
 		  toppings.add(top);
@@ -94,7 +94,7 @@ public class AdvancedIceCreamCone {
 
 /**
  * this method returns a String with a list of the toppings
- * @return
+ * @return List of toppings
  */
 	public ArrayList<String> getToppings () {
 		return toppings;
