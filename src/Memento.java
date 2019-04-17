@@ -7,10 +7,22 @@
  */
 
 import java.util.ArrayList;
+/**
+ * Holds state information of AdvancedIceCreamCone object
+ * @author Abel and Saul
+ * @version 1.0
+ */
 public class Memento {
 	
+	/**
+	 * State of AdvancedIceCreamObject saved
+	 */
 	private AdvancedIceCreamCone iceCream;
 	
+	/**
+	 * Creates AdvancedIceCreamCone object and stores it in private field
+	 * @param iceCream AdvancedIceCreamCone you want to save
+	 */
 	public Memento(AdvancedIceCreamCone iceCream) {
 		int numOfScoop = iceCream.getNumberOfScoops();
 		String flav = iceCream.getFlavor();
@@ -24,10 +36,17 @@ public class Memento {
 		
 	}
 	
+	/**
+	 * Returns the state of AdvancedIceCreamCone saved
+	 * @return AdvacedIceCreamCone
+	 */
 	public AdvancedIceCreamCone getState() {
 		return iceCream;
 	}
 	
+	/**
+	 * Overriden toString method. Return String of AdvancedIceCreamCone information
+	 */
 	@Override
 	public String toString() {
 		return String.format(	"State: %5d%10s%10s", 
