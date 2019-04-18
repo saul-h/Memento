@@ -22,17 +22,14 @@ public class Main {
 		
 		// Creating objects for memento design pattern
 		Originator originator = new Originator();
-		CareTaker careTaker = new CareTaker();	// Used for chocolate ice cream
-		CareTaker careTaker2 = new CareTaker();	// Used for vanilla ice cream
-		CareTaker careTaker3 = new CareTaker();	// Used for Strawberry ice cream
-		
+		CareTaker careTaker = new CareTaker();	// Used for to save all ice cream cones
 		// Saving all states
 		originator.setState(chocolateIceCream);
 		careTaker.add(originator.saveStateToMemento());
 		originator.setState(vanillaIceCream);
-		careTaker2.add(originator.saveStateToMemento());
+		careTaker.add(originator.saveStateToMemento());
 		originator.setState(strawberryIceCream);
-		careTaker3.add(originator.saveStateToMemento());
+		careTaker.add(originator.saveStateToMemento());
 		
 		// Changing ice creams so they can be restored later
 		chocolateIceCream.addScoop();
@@ -68,11 +65,11 @@ public class Main {
 			System.out.println(originator.getState());
 		}else if(index == 2) {
 			System.out.println("Restroing vanilla...");
-			originator.getStateFromMemento(careTaker2.get(0));
+			originator.getStateFromMemento(careTaker.get(1));
 			System.out.println(originator.getState());
 		}else {
 			System.out.println("Restoring strawberry...");
-			originator.getStateFromMemento(careTaker3.get(0));
+			originator.getStateFromMemento(careTaker.get(2));
 			System.out.println(originator.getState());
 		}
 	}
